@@ -11,4 +11,5 @@ function isPositive(a) {
       return error;
     }
   }
+  
   console.log(isPositive(-5));
