@@ -1,12 +1,9 @@
-function dayOfYear(diffInDays){
-    const date1 = new Date('dayOfYearStart');
-    const date2 = new Date('dayOfYearEnd');
-    const diffInMilliseconds = date1 - date2;
-    const diffInSeconds = diffInMilliseconds / 1000;
-    const diffInMinutes = diffInSeconds / 60;
-    const diffInHours = diffInMinutes / 60;
-    const diffInDays = diffInHours / 24;
-    return diffInDays
-}
-console.log(dayOfYear("12/13/2020"))
-
+function dayOfYear(string) {
+    let date = new Date(string);
+    let year = date.getFullYear();
+    let lastDate = new Date(`01/01/${year}`);
+    let d = (date - lastDate) / (1000 * 60 * 60 * 24) + 1;
+    return d;
+  }
+  
+  console.log(dayOfYear("12/13/2020"));
